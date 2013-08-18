@@ -16,6 +16,9 @@ validates :first_name, presence: true
   validates :profile_name, presence: true
                            
   has_many :posts
+has_many :user_friendships
+has_many :friends, through: :user_friendships
+
   
 def to_param
   profile_name
