@@ -1,0 +1,15 @@
+  <h3>
+  <img src="<%= @user.gravatar_url %>">
+        <%= @user.full_name %><br />
+  </h3>
+<% if @posts %>
+<br />
+  <h4><%= @user.first_name %>'s status updates:</h4>
+  <% @posts.each do |post| %>
+    <div class="well">
+      <%= post.Content %>
+      <hr />
+      <%= link_to time_ago_in_words(post.created_at), post_path(post) %> ago
+    </div>
+  <% end %>
+<% end %>
