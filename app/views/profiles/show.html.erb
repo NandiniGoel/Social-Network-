@@ -2,6 +2,9 @@
   <img src="<%= @user.gravatar_url %>">
         <%= @user.full_name %><br />
   </h3>
+<%= link_to "Add Friend", new_user_friendship_path(friend_id: @user), class: 'btn', id: 'add-friendship', data: { friend_id: @user.to_param } %>
+
+
 <% if @posts %>
 <br />
   <h4><%= @user.first_name %>'s status updates:</h4>

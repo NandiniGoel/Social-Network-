@@ -25,7 +25,7 @@ get "profiles/show"
 
 get '/:id', to: 'profiles#show', as: 'profile'
 
-
+resources :user_friendships
 
 root to: 'posts#index'
 
