@@ -26,7 +26,7 @@ conditions: { state: 'pending' }
 
 has_many :pending_friends, through: :pending_user_friendships, source: :friend
 
-
+end
   
 def to_param
   profile_name
