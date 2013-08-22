@@ -14,6 +14,7 @@ group :production do
   gem 'rails_12factor'
 end
 gem 'devise'
+gem 'state_machine'
 
 # Gems used only for assets and not required
 # in production environments by default.
