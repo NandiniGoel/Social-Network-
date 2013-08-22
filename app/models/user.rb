@@ -17,7 +17,7 @@ validates :first_name, presence: true
                            
   has_many :posts
 has_many :user_friendships
-has_many :friends, through: :user_friendships
+has_many :friends, through: :user_friendships,
                    conditions: { user_friendships: { state: 'accepted' } }
 
 has_many :pending_user_friendships, class_name: 'UserFriendship',
@@ -26,7 +26,6 @@ conditions: { state: 'pending' }
 
 has_many :pending_friends, through: :pending_user_friendships, source: :friend
 
-end
   
 def to_param
   profile_name
